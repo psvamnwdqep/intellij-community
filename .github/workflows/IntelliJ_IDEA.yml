@@ -1,12 +1,8 @@
 name: IntelliJ IDEA
 on:
-  schedule:
-    # daily at 4AM for the master branch
-    - cron: '0 4 * * *'
+  workflow_dispatch:
   push:
-    # for each release
-    tags:
-      - 'idea/20*'
+  
 env:
   artifacts_dir: 'out/idea-ce/artifacts'
 jobs:
